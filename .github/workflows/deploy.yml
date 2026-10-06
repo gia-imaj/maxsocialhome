@@ -33,6 +33,9 @@ jobs:
             git push
           fi
 
+      - name: Stamp CSS and JS links so browsers fetch fresh copies
+        run: sed -i "s/__BUILD__/${GITHUB_SHA::7}/g" index.html
+
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3
