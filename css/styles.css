@@ -358,6 +358,7 @@ ul { list-style: none; }
 
 /* ---------- IG feed ---------- */
 .ig {
+  position: relative;
   padding: 63px var(--gutter) 63px;
   background: radial-gradient(80% 80% at 69% 67%, var(--navy-glow) 0%, var(--navy) 100%);
   text-align: center;
