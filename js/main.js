@@ -175,11 +175,11 @@
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
 
   videos.forEach(v => {
-    const show = () => v.classList.add('is-playing');
+    const show = () => { v.classList.add('is-playing'); v.parentElement.classList.add('has-video'); };
     v.addEventListener('playing', show);
     v.addEventListener('timeupdate', show, { once: true });
     if (!v.paused && v.readyState > 2) show();
-    v.addEventListener('error', () => v.classList.remove('is-playing'), true);
+    v.addEventListener('error', () => { v.classList.remove('is-playing'); v.parentElement.classList.remove('has-video'); }, true);
   });
 
   const tryPlay = v => {
