@@ -153,3 +153,17 @@
     restart();
   }
 })();
+
+/* Sticky "night changes" section: pin at the nav, or by its bottom edge if taller than the screen */
+(() => {
+  const night = document.querySelector('.night');
+  if (!night) return;
+  const NAV = 72;
+  const set = () => {
+    const top = Math.min(NAV, window.innerHeight - night.offsetHeight);
+    night.style.setProperty('--night-top', `${top}px`);
+  };
+  set();
+  window.addEventListener('resize', set);
+  window.addEventListener('load', set);
+})();

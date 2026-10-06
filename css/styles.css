@@ -213,7 +213,12 @@ ul { list-style: none; }
 .cta-row--center { justify-content: center; }
 
 /* ---------- Night changes ---------- */
-.night { background: var(--navy-card); padding: 47px 0 56px; }
+.night {
+  /* Pinned so the Spaces accordion slides up over it. --night-top is set in JS
+     so a section taller than the viewport pins by its bottom edge. */
+  position: sticky; top: var(--night-top, 72px); z-index: 0;
+  background: var(--navy-card); padding: 47px 0 0;
+}
 .night__title { text-align: center; padding: 0 var(--gutter); margin-bottom: 35px; }
 .night__grid { display: grid; grid-template-columns: 430fr 431fr 419fr; }
 .night__panel { position: relative; overflow: hidden; height: 627px; }
@@ -229,6 +234,8 @@ ul { list-style: none; }
 
 /* ---------- Spaces accordion ---------- */
 .spaces {
+  position: relative; z-index: 1;
+  box-shadow: 0 -24px 48px rgba(0, 0, 0, .45);
   display: grid; grid-template-columns: 38% 62%;
   min-height: 917px;
   background: var(--espresso);
