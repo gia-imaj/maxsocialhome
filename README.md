@@ -7,7 +7,7 @@ Static site built from the Figma file "Untitled" (`WsIGSL1hlkU1OYJswcUmLU`, sect
 - `index.html` — page markup
 - `css/styles.css` — design tokens at the top (colors, type, fluid sizes)
 - `js/main.js` — mobile menu, scroll reveals, Spaces accordion, reviews carousel
-- `fonts/` — PP Formula Condensed Black, The Bristers Script
+- `fonts/` — PP Formula Condensed Black, The Bristers Script, TT Norms Pro (Medium, Bold, Black)
 - `assets/` — images exported from Figma
 - `scripts/figma-assets.tsv` — which Figma image becomes which file
 
@@ -27,5 +27,5 @@ The Figma image links expire about a week after export (around 2026-10-12). Afte
 
 ## Before launch
 
-- Body type is Figtree. Swap in licensed TT Norms Pro web fonts (Medium, Bold, ExtraBold); the block is ready in `css/styles.css`.
+- Large titles use TT Norms Pro Black in place of the ExtraBold in Figma. Add an ExtraBold woff2 to match exactly.
 - Placeholder content: three identical reviews, "Band Name One" event cards, `#` links for reservations, Instagram and Facebook.

@@ -1,17 +1,13 @@
 /* Max's Social House — homepage
    Built from Figma file WsIGSL1hlkU1OYJswcUmLU (Home + /page states).
-   Body copy uses Figtree until licensed TT Norms Pro web fonts (Medium, Bold,
-   ExtraBold) are added. The trial files are evaluation-only, so they stay out.
-   To switch: add the woff2 files to /fonts and uncomment the block below. */
+   The design calls for TT Norms Pro ExtraBold on large titles; Black (900) stands
+   in until an ExtraBold file is added. Weight 800 requests resolve to Black. */
 
 @font-face { font-family: "PP Formula Condensed"; src: url("../fonts/PPFormula-CondensedBlack.woff2") format("woff2"); font-weight: 900; font-display: swap; }
 @font-face { font-family: "Bristers Script"; src: url("../fonts/TheBristersScript.woff2") format("woff2"); font-weight: 400; font-display: swap; }
-
-/*
 @font-face { font-family: "TT Norms Pro"; src: url("../fonts/TTNormsPro-Medium.woff2") format("woff2"); font-weight: 500; font-display: swap; }
 @font-face { font-family: "TT Norms Pro"; src: url("../fonts/TTNormsPro-Bold.woff2") format("woff2"); font-weight: 700; font-display: swap; }
-@font-face { font-family: "TT Norms Pro"; src: url("../fonts/TTNormsPro-ExtraBold.woff2") format("woff2"); font-weight: 800; font-display: swap; }
-*/
+@font-face { font-family: "TT Norms Pro"; src: url("../fonts/TTNormsPro-Black.woff2") format("woff2"); font-weight: 800 900; font-display: swap; }
 
 :root {
   /* Color (from Figma fills) */
@@ -228,8 +224,8 @@ ul { list-style: none; }
 }
 .night__panel:hover img { transform: scale(1.05); filter: brightness(1.1); }
 .night__text { position: absolute; z-index: 1; left: 28px; right: 28px; bottom: 50px; max-width: 360px; }
-.night__text h3 { font-weight: 800; font-size: var(--t-h3); color: var(--cream); line-height: 1.05; }
-.night__text p { margin: 22px 0 28px; font-weight: 500; font-size: 18px; color: var(--sand); line-height: 1.2; }
+.night__text h3 { font-weight: 800; font-size: var(--t-h3); color: var(--cream); line-height: 1.05; text-transform: uppercase; }
+.night__text p { margin: 22px 0 28px; min-height: 3.6em; font-weight: 500; font-size: 18px; color: var(--sand); line-height: 1.2; }
 
 /* ---------- Spaces accordion ---------- */
 .spaces {
