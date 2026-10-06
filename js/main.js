@@ -167,3 +167,35 @@
   window.addEventListener('resize', set);
   window.addEventListener('load', set);
 })();
+
+/* Background videos: fade in once playing, pause when offscreen, respect reduced motion */
+(() => {
+  const videos = [...document.querySelectorAll('.bg-video')];
+  if (!videos.length) return;
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  videos.forEach(v => {
+    const show = () => v.classList.add('is-playing');
+    v.addEventListener('playing', show);
+    v.addEventListener('timeupdate', show, { once: true });
+    if (!v.paused && v.readyState > 2) show();
+    v.addEventListener('error', () => v.classList.remove('is-playing'), true);
+  });
+
+  const tryPlay = v => {
+    if (reduce.matches) return;
+    if (v.dataset.lazyVideo !== undefined && v.preload === 'none') v.preload = 'auto';
+    const p = v.play();
+    if (p && p.catch) p.catch(() => {});
+  };
+
+  if (!('IntersectionObserver' in window)) { videos.forEach(tryPlay); return; }
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(({ target: v, isIntersecting }) => {
+      if (isIntersecting) tryPlay(v); else v.pause();
+    });
+  }, { rootMargin: '200px 0px' });
+  videos.forEach(v => io.observe(v));
+
+  reduce.addEventListener?.('change', () => videos.forEach(v => reduce.matches ? v.pause() : tryPlay(v)));
+})();

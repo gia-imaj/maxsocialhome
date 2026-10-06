@@ -154,6 +154,19 @@ ul { list-style: none; }
 .hero__title .is-gold { margin-top: .18em; }
 .hero__sub { margin: 28px auto 48px; max-width: 894px; font-size: var(--t-sub); line-height: 1.6; color: var(--sand); }
 
+/* ---------- Background video ----------
+   The still image stays underneath. The video fades in only once it is
+   actually playing, so a missing or blocked file falls back to the image.
+   Tune darkness per section with --video-opacity. */
+.bg-video {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; pointer-events: none;
+  opacity: 0; transition: opacity 1.2s var(--ease);
+}
+.bg-video.is-playing { opacity: var(--video-opacity, .35); }
+.bg-video--hero { --video-opacity: .32; background: var(--ink); }
+.bg-video--menu { --video-opacity: .3; background: var(--navy); }
+
 /* ---------- Feature ---------- */
 .feature {
   position: relative; overflow: hidden;
