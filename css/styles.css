@@ -70,6 +70,13 @@ ul { list-style: none; }
 .is-gold { color: var(--gold); }
 
 /* ---------- Type helpers ---------- */
+/* No single-word last lines. Headings and short leads balance their lines;
+   longer copy uses "pretty" wrapping. js/main.js adds a fallback for browsers
+   without text-wrap: pretty (keeps the last two words together). */
+h1, h2, h3, .lede, .hero__sub, .feature__lead, .happy__sub, .feature__kicker,
+.review blockquote, .event__info h3, .dish__info h3 { text-wrap: balance; }
+p, li, blockquote, figcaption { text-wrap: pretty; }
+
 .display {
   font-family: var(--f-display);
   font-weight: 900;

@@ -199,3 +199,36 @@
 
   reduce.addEventListener?.('change', () => videos.forEach(v => reduce.matches ? v.pause() : tryPlay(v)));
 })();
+
+/* Widow fallback for browsers without text-wrap: pretty (Firefox):
+   join the last two words of each text block with a non-breaking space,
+   including when the last word sits in its own inline span. */
+(() => {
+  if (window.CSS && CSS.supports && CSS.supports('text-wrap', 'pretty')) return;
+  const isInline = (node, root) => {
+    for (let e = node.parentElement; e && e !== root; e = e.parentElement) {
+      if (!getComputedStyle(e).display.startsWith('inline')) return false;
+    }
+    return true;
+  };
+  document.querySelectorAll('main p, main h1, main h2, main h3, main blockquote, main figcaption, .footer p').forEach(el => {
+    if (/flex|grid/.test(getComputedStyle(el).display)) return;
+    const nodes = [];
+    const w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+    while (w.nextNode()) nodes.push(w.currentNode);
+    let phase = 0; // 0: trailing space, 1: last word, 2: done
+    for (let k = nodes.length - 1; k >= 0 && phase < 2; k--) {
+      const n = nodes[k], v = n.nodeValue;
+      for (let i = v.length - 1; i >= 0; i--) {
+        const space = /\s/.test(v[i]);
+        if (phase === 0 && !space) phase = 1;
+        else if (phase === 1 && space) {
+          if (!isInline(n, el)) { phase = 2; break; }
+          let j = i; while (j > 0 && /\s/.test(v[j - 1])) j--;
+          n.nodeValue = v.slice(0, j) + ' ' + v.slice(i + 1);
+          phase = 2; break;
+        }
+      }
+    }
+  });
+})();
