@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Max's Social House | Hudson</title>
-  <meta name="description" content="Five distinct spaces. One unforgettable address. Dinner, cocktails, live music and late night in Hudson.">
+  <title>Max's Social House | Downtown Hudson, Wisconsin</title>
+  <meta name="description" content="Southern-inspired food, craft cocktails, live music and five distinct spaces at 302 Second Street in downtown Hudson, Wisconsin.">
   <meta name="theme-color" content="#0f1a3d">
   <link rel="icon" href="assets/star.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,11 +22,12 @@
       <span></span><span></span>
     </button>
     <nav class="nav__links" id="nav-links" aria-label="Primary">
-      <a href="#spaces">The Spaces</a>
       <a href="#menu">Menus</a>
-      <a href="#events">Events</a>
-      <a href="#night">Private Events</a>
-      <a href="#reserve" class="is-accent">Reservations</a>
+      <a href="#events">Events &amp; Live Music</a>
+      <a href="#spaces">Our Spaces</a>
+      <a href="#">Private Events</a>
+      <a href="#">About</a>
+      <a href="#reserve" class="btn btn--solid nav__cta">Reserve a table</a>
     </nav>
   </header>
 
@@ -49,6 +50,7 @@
           <a class="btn btn--solid" href="#reserve">Reserve a table</a>
           <a class="btn btn--ghost" href="#menu">Explore the menu</a>
         </div>
+        <p class="hero__address reveal">302 Second Street · Downtown Hudson, Wisconsin</p>
       </div>
     </section>
 
@@ -58,8 +60,10 @@
         <img src="assets/food-feature.png" alt="A plated dish at Max's Social House" loading="lazy">
       </div>
       <div class="feature__body">
-        <h2 id="feature-title" class="display display--lg reveal">Max's is a <span class="is-gold">living room</span> for Hudson</h2>
-        <p class="lede reveal">A third-space that shifts from an intimate dinner at 7 to a live set at 10. Show up for the food Chef Sean is putting out. Stay for what happens after. Come back for everything else.</p>
+        <h2 id="feature-title" class="display feature__title reveal"><span>Not just dinner.</span> <span class="is-gold">Not just a bar.</span></h2>
+        <p class="lede feature__lead reveal">A great night shouldn't have to end after dinner.</p>
+        <p class="feature__copy reveal">Come for dinner. Stay for cocktails. Find live music upstairs in the Attic. Catch dueling pianos in the Parlor. Meet friends in the Atrium. Celebrate something, or nothing at all.</p>
+        <p class="feature__kicker reveal">One destination. A different night every time.</p>
         <a class="btn btn--outline reveal" href="#spaces">Explore the spaces</a>
       </div>
     </section>
@@ -73,7 +77,7 @@
       </video>
       <div class="container">
         <h2 id="menu-title" class="display display--lg reveal">Come <span class="is-gold">Hungry</span></h2>
-        <p class="lede menu__lede reveal">Southern roots. Midwest soul. Every plate is built to be talked about long after the table is cleared.</p>
+        <p class="lede menu__lede reveal">Southern smokehouse roots. American comfort. A little unexpected.</p>
 
         <ul class="dishes">
           <li class="dish reveal">
@@ -117,6 +121,18 @@
       </div>
     </section>
 
+    <!-- HAPPY HOUR -->
+    <section class="happy" aria-labelledby="happy-title">
+      <div class="happy__inner">
+        <img class="happy__star" src="assets/star.png" alt="" aria-hidden="true">
+        <div class="happy__text">
+          <h2 id="happy-title" class="display happy__title reveal">Happy Hour <span>at Max's</span></h2>
+          <p class="happy__sub reveal">Come early or late. Either way you save.</p>
+        </div>
+        <a class="btn btn--dark reveal" href="#">View Happy Hour Menu</a>
+      </div>
+    </section>
+
     <!-- Night + Spaces: the night section pins while Spaces scrolls over it -->
     <div class="night-stack">
     <!-- THE NIGHT CHANGES -->
@@ -124,27 +140,27 @@
       <h2 id="night-title" class="display display--lg night__title reveal">The night <span class="is-gold">changes</span> after dinner</h2>
       <div class="night__grid">
         <article class="night__panel">
-          <img src="assets/night-late.png" alt="Craft cocktails at the bar" loading="lazy">
-          <div class="night__text">
-            <h3>Late Night</h3>
-            <p>Late-night bites, craft cocktails, and a crowd that knows what they're staying for.</p>
-            <a class="link-cta" href="#menu">View bar menu &gt;</a>
-          </div>
-        </article>
-        <article class="night__panel">
           <img src="assets/night-music.png" alt="Live band on stage" loading="lazy">
           <div class="night__text">
             <h3>Live Music</h3>
-            <p>Local and regional artists, weekly. Jazz, soul, blues, and the occasional surprise. We have something for everyone.</p>
+            <p>Bands. Artists. Acoustic sets. Music worth staying out for.</p>
             <a class="link-cta" href="#events">View upcoming shows &gt;</a>
           </div>
         </article>
         <article class="night__panel">
           <img src="assets/night-events.png" alt="Guests at a themed event" loading="lazy">
           <div class="night__text">
-            <h3>Events</h3>
-            <p>Dueling Pianos. Themed nights. Private buyouts. If you can imagine the evening, we can host it.</p>
+            <h3>Events &amp; Experiences</h3>
+            <p>Comedy. Dueling pianos. Watch parties. Murder mysteries. Poker nights. There's always another reason to come back.</p>
             <a class="link-cta" href="#events">View events schedule &gt;</a>
+          </div>
+        </article>
+        <article class="night__panel">
+          <img src="assets/night-late.png" alt="Craft cocktails at the bar" loading="lazy">
+          <div class="night__text">
+            <h3>Late Night</h3>
+            <p>Cocktails. Friends. Music. Some nights aren't supposed to end early.</p>
+            <a class="link-cta" href="#menu">View bar menu &gt;</a>
           </div>
         </article>
       </div>
@@ -166,7 +182,7 @@
           </button>
           <div class="space__body" id="space-parlor" role="region" aria-label="The Parlor">
             <h3>The Parlor</h3>
-            <p>Curated and unhurried. The room for a long dinner with good wine and better company.</p>
+            <p>Curated and unhurried. A long dinner with good wine and better company, until the dueling pianos take the room.</p>
             <a class="link-cta link-cta--underline" href="#reserve">Reserve the Parlor →</a>
           </div>
         </article>
@@ -199,7 +215,7 @@
           </button>
           <div class="space__body" id="space-social" role="region" aria-label="The Social Hall">
             <h3>The Social Hall</h3>
-            <p>Full buyout capacity for weddings, corporate events, and celebrations that need the whole stage.</p>
+            <p>Gather differently. Private dinners, birthdays and company parties, made for celebrations that shouldn't feel like a banquet room.</p>
             <a class="link-cta" href="#reserve">Plan your next event &gt;</a>
           </div>
         </article>
@@ -297,8 +313,9 @@
         </h2>
         <p class="hero__sub reveal">The table is set. The bar is open. The stage is ready.<br>The only question is what you want from the night.</p>
         <div class="cta-row reveal">
-          <a class="btn btn--solid" href="#reserve">Reserve a table</a>
-          <a class="btn btn--ghost" href="#spaces">Explore our private spaces</a>
+          <a class="btn btn--solid" href="#reserve">Reserve dinner</a>
+          <a class="btn btn--ghost" href="#events">See live events</a>
+          <a class="btn btn--ghost" href="#">Plan a party</a>
         </div>
       </div>
     </section>
@@ -310,6 +327,7 @@
     <div class="footer__cols">
       <div>
         <h4>Visit</h4>
+        <address class="footer__address">302 Second Street<br>Downtown Hudson, Wisconsin</address>
         <a href="#reserve">Hours &amp; Location</a>
         <a href="#reserve">Parking &amp; Access</a>
         <a href="#reserve">Reserve a Table</a>

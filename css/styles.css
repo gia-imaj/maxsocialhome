@@ -98,6 +98,8 @@ ul { list-style: none; }
 .btn--ghost { border-color: rgba(246, 244, 234, .3); color: var(--sand); }
 .btn--ghost:hover { border-color: var(--cream); color: var(--cream); }
 .btn--outline { border-color: var(--copper); color: var(--sand); }
+.btn--dark { background: var(--navy); color: var(--cream); }
+.btn--dark:hover { background: var(--espresso); }
 .btn--outline:hover { background: var(--copper); color: var(--cream); }
 
 .link-cta {
@@ -130,7 +132,8 @@ ul { list-style: none; }
   transition: transform .3s var(--ease);
 }
 .nav__links a:hover::after, .nav__links a:focus-visible::after { transform: scaleX(1); }
-.nav__links a.is-accent { color: var(--gold); }
+.nav__links a.nav__cta { padding: 12px 22px; color: var(--cream); white-space: nowrap; }
+.nav__links a.nav__cta::after { display: none; }
 .nav__toggle { display: none; }
 
 /* ---------- Hero ---------- */
@@ -152,6 +155,10 @@ ul { list-style: none; }
 .hero__content { position: relative; max-width: 1175px; }
 .hero__title { font-size: var(--t-hero); display: flex; flex-direction: column; color: var(--cream); }
 .hero__title .is-gold { margin-top: .18em; }
+.hero__address {
+  margin-top: 28px;
+  font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--sand);
+}
 .hero__sub { margin: 28px auto 48px; max-width: 894px; font-size: var(--t-sub); line-height: 1.6; color: var(--sand); }
 
 /* ---------- Background video ----------
@@ -183,7 +190,11 @@ ul { list-style: none; }
 .feature__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .feature__body { padding: 76px var(--gutter) 76px 0; max-width: 560px; }
 .feature__body h2 { margin-bottom: 40px; }
-.feature__body .lede { margin-bottom: 40px; }
+.feature__title { font-size: clamp(2.75rem, 5.3vw, 4.25rem); }
+.feature__title span { display: block; }
+.feature__body .feature__lead { margin-bottom: 18px; color: var(--cream); }
+.feature__copy { font-weight: 500; font-size: clamp(1rem, 1.5vw, 1.25rem); line-height: 1.6; color: var(--sand); }
+.feature__kicker { margin: 22px 0 40px; font-size: clamp(1rem, 1.5vw, 1.25rem); color: var(--gold); }
 
 /* ---------- Come Hungry ---------- */
 .menu { position: relative; overflow: hidden; background: var(--navy); padding: 66px 0 66px; }
@@ -228,6 +239,23 @@ ul { list-style: none; }
 .dish__cta:hover { background: var(--gold); }
 .cta-row--center { justify-content: center; }
 
+/* ---------- Happy hour ---------- */
+.happy {
+  position: relative; overflow: hidden;
+  background: linear-gradient(100deg, var(--copper) 0%, var(--caramel) 60%, #8a5a24 100%);
+  padding: 40px var(--gutter);
+}
+.happy__inner {
+  max-width: 1172px; margin: 0 auto;
+  display: flex; align-items: center; gap: 28px;
+}
+.happy__star { width: 64px; height: 64px; flex: none; animation: spin 18s linear infinite; filter: brightness(0) invert(.96) sepia(.1); }
+.happy__text { flex: 1; }
+.happy__title { font-size: clamp(2.25rem, 4.4vw, 3.5rem); color: var(--cream); }
+.happy__title span { color: var(--navy); }
+.happy__sub { margin-top: 6px; font-size: var(--t-lede); color: var(--cream); }
+.happy .btn { flex: none; }
+
 /* ---------- Night changes ---------- */
 .night {
   /* Pinned so the Spaces accordion slides up over it. --night-top is set in JS
@@ -244,9 +272,13 @@ ul { list-style: none; }
   background: linear-gradient(180deg, transparent 45%, rgba(15, 26, 61, .55) 100%);
 }
 .night__panel:hover img { transform: scale(1.05); filter: brightness(1.1); }
-.night__text { position: absolute; z-index: 1; left: 28px; right: 28px; bottom: 64px; max-width: 360px; }
+.night__text {
+  position: absolute; z-index: 1; left: 28px; right: 28px; top: 52%; bottom: 56px;
+  max-width: 360px; display: flex; flex-direction: column;
+}
+.night__text .link-cta { margin-top: auto; align-self: flex-start; }
 .night__text h3 { font-weight: 800; font-size: var(--t-h3); color: var(--cream); line-height: 1.05; text-transform: uppercase; }
-.night__text p { margin: 22px 0 28px; min-height: 3.6em; font-weight: 500; font-size: 18px; color: var(--sand); line-height: 1.2; }
+.night__text p { margin: 18px 0 24px; font-weight: 500; font-size: 18px; color: var(--sand); line-height: 1.2; }
 
 /* ---------- Spaces accordion ---------- */
 .spaces {
@@ -420,6 +452,7 @@ ul { list-style: none; }
 .footer__cols { display: grid; grid-template-columns: repeat(3, 180px); padding-top: 13px; }
 .footer__cols div { display: flex; flex-direction: column; gap: 12px; }
 .footer h4 { font-weight: 700; font-size: 10px; letter-spacing: 2px; color: var(--copper); margin-bottom: 4px; }
+.footer__address { font-style: normal; font-weight: 400; font-size: 13px; line-height: 1.5; color: var(--cream); margin-bottom: 4px; }
 .footer__cols a { font-weight: 400; font-size: 13px; color: var(--sand); transition: color .2s; }
 .footer__cols a:hover { color: var(--cream); }
 .footer__legal { grid-column: 1 / -1; margin-left: -8px; font-weight: 400; font-size: 11px; color: var(--muted); }
@@ -481,6 +514,11 @@ ul { list-style: none; }
   .space__body { left: var(--gutter); right: var(--gutter); bottom: 40px; }
   .space__body h3 { white-space: normal; }
 
+  .happy__inner { flex-wrap: wrap; gap: 16px 20px; }
+  .happy__star { width: 48px; height: 48px; }
+  .happy .btn { width: 100%; }
+  .night__text { top: auto; bottom: 40px; }
+  .night__text .link-cta { margin-top: 0; }
   .events .container { padding: 0 var(--gutter); }
   .events__head { flex-direction: column; padding-left: 0; }
   .events__stickers { display: none; }
