@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Max's Social House | Hudson</title>
+  <meta name="description" content="Five distinct spaces. One unforgettable address. Dinner, cocktails, live music and late night in Hudson.">
+  <meta name="theme-color" content="#0f1a3d">
+  <link rel="icon" href="assets/star.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;700;800&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- NAV -->
+  <header class="nav" id="top">
+    <a class="nav__brand" href="#top">Max's Social House</a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+    <nav class="nav__links" id="nav-links" aria-label="Primary">
+      <a href="#spaces">The Spaces</a>
+      <a href="#menu">Menus</a>
+      <a href="#events">Events</a>
+      <a href="#night">Private Events</a>
+      <a href="#reserve" class="is-accent">Reservations</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero__bg" src="assets/hero-bg.png" alt="" aria-hidden="true">
+      <img class="hero__logo" src="assets/logo.svg" alt="Max's Social House" width="145" height="90">
+      <div class="hero__content">
+        <h1 id="hero-title" class="display hero__title">
+          <span class="reveal">Dinner is just</span>
+          <span class="reveal is-gold">the beginning.</span>
+        </h1>
+        <p class="hero__sub reveal">Five distinct spaces. One unforgettable address.<br>Dinner. Cocktails. Live music. Late night.</p>
+        <div class="cta-row reveal">
+          <a class="btn btn--solid" href="#reserve">Reserve a table</a>
+          <a class="btn btn--ghost" href="#menu">Explore the menu</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOD FEATURE -->
+    <section class="feature" aria-labelledby="feature-title">
+      <div class="feature__media">
+        <img src="assets/food-feature.png" alt="A plated dish at Max's Social House" loading="lazy">
+      </div>
+      <div class="feature__body">
+        <h2 id="feature-title" class="display display--lg reveal">Max's is a <span class="is-gold">living room</span> for Hudson</h2>
+        <p class="lede reveal">A third-space that shifts from an intimate dinner at 7 to a live set at 10. Show up for the food Chef Sean is putting out. Stay for what happens after. Come back for everything else.</p>
+        <a class="btn btn--outline reveal" href="#spaces">Explore the spaces</a>
+      </div>
+    </section>
+
+    <!-- COME HUNGRY -->
+    <section class="menu" id="menu" aria-labelledby="menu-title">
+      <img class="menu__bg" src="assets/kitchen-bg.png" alt="" aria-hidden="true" loading="lazy">
+      <div class="container">
+        <h2 id="menu-title" class="display display--lg reveal">Come <span class="is-gold">Hungry</span></h2>
+        <p class="lede menu__lede reveal">Southern roots. Midwest soul. Every plate is built to be talked about long after the table is cleared.</p>
+
+        <ul class="dishes">
+          <li class="dish reveal">
+            <div class="dish__img"><img src="assets/dish-board.png" alt="Max's Social Board" loading="lazy" style="--w:118.27%;--h:120.62%;--x:-7.47%;--y:-7.44%"></div>
+            <div class="dish__info">
+              <h3>Max's Social Board</h3>
+              <p>Rotating charcuterie, seasonal accoutrements, house preserves.</p>
+              <a class="dish__cta" href="#menu">View menu</a>
+            </div>
+          </li>
+          <li class="dish reveal">
+            <div class="dish__img"><img src="assets/dish-crab-cakes.png" alt="Crab cakes" loading="lazy" style="--w:149.84%;--h:152.25%;--x:-30.57%;--y:-33.52%"></div>
+            <div class="dish__info">
+              <h3>Crab Cakes</h3>
+              <p>Pan-seared Maryland-style. Remoulade, pickled slaw, lemon</p>
+              <a class="dish__cta" href="#menu">View menu</a>
+            </div>
+          </li>
+          <li class="dish reveal">
+            <div class="dish__img"><img src="assets/dish-burnt-end.png" alt="Turkey burnt end sandwich" loading="lazy" style="--w:162.76%;--h:165.34%;--x:-30.32%;--y:-47.65%"></div>
+            <div class="dish__info">
+              <h3>Turkey Burnt End Sandwich</h3>
+              <p>Slow-smoked, caramelized, stacked. The one they come back for.</p>
+              <a class="dish__cta" href="#menu">View menu</a>
+            </div>
+          </li>
+          <li class="dish reveal">
+            <div class="dish__img"><img src="assets/dish-beignets.png" alt="Beignets" loading="lazy" style="--w:176.62%;--h:179.55%;--x:-74.66%;--y:-35.58%"></div>
+            <div class="dish__info">
+              <h3>Beignets</h3>
+              <p>Hot, powdered, nostalgic. Chocolate espresso dipping sauce.</p>
+              <a class="dish__cta" href="#menu">View menu</a>
+            </div>
+          </li>
+        </ul>
+
+        <div class="cta-row cta-row--center reveal">
+          <a class="btn btn--solid" href="#reserve">Reserve a table</a>
+          <a class="btn btn--outline" href="#menu">View full menu</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE NIGHT CHANGES -->
+    <section class="night" id="night" aria-labelledby="night-title">
+      <h2 id="night-title" class="display display--lg night__title reveal">The night <span class="is-gold">changes</span> after dinner</h2>
+      <div class="night__grid">
+        <article class="night__panel">
+          <img src="assets/night-late.png" alt="Craft cocktails at the bar" loading="lazy">
+          <div class="night__text">
+            <h3>Late Night</h3>
+            <p>Late-night bites, craft cocktails, and a crowd that knows what they're staying for.</p>
+            <a class="link-cta" href="#menu">View bar menu &gt;</a>
+          </div>
+        </article>
+        <article class="night__panel">
+          <img src="assets/night-music.png" alt="Live band on stage" loading="lazy">
+          <div class="night__text">
+            <h3>Live Music</h3>
+            <p>Local and regional artists, weekly. Jazz, soul, blues, and the occasional surprise. We have something for everyone.</p>
+            <a class="link-cta" href="#events">View upcoming shows &gt;</a>
+          </div>
+        </article>
+        <article class="night__panel">
+          <img src="assets/night-events.png" alt="Guests at a themed event" loading="lazy">
+          <div class="night__text">
+            <h3>Events</h3>
+            <p>Dueling Pianos. Themed nights. Private buyouts. If you can imagine the evening, we can host it.</p>
+            <a class="link-cta" href="#events">View events schedule &gt;</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- BUILD YOUR PERFECT NIGHT (accordion) -->
+    <section class="spaces" id="spaces" aria-labelledby="spaces-title">
+      <div class="spaces__intro">
+        <p class="eyebrow reveal">Five spaces. One destination.</p>
+        <h2 id="spaces-title" class="display display--lg reveal">Build your<br><span class="is-gold">perfect</span><br>night out</h2>
+        <p class="spaces__hint">Tap a space to step inside.</p>
+      </div>
+
+      <div class="accordion" data-accordion>
+        <article class="space" data-space>
+          <button class="space__tab" aria-expanded="false" aria-controls="space-parlor">
+            <img src="assets/space-parlor.png" alt="" loading="lazy">
+            <span class="space__label">The Parlor</span>
+          </button>
+          <div class="space__body" id="space-parlor" role="region" aria-label="The Parlor">
+            <h3>The Parlor</h3>
+            <p>Curated and unhurried. The room for a long dinner with good wine and better company.</p>
+            <a class="link-cta link-cta--underline" href="#reserve">Reserve the Parlor →</a>
+          </div>
+        </article>
+        <article class="space" data-space>
+          <button class="space__tab" aria-expanded="false" aria-controls="space-attic">
+            <img src="assets/space-attic.png" alt="" loading="lazy">
+            <span class="space__label">The Attic</span>
+          </button>
+          <div class="space__body" id="space-attic" role="region" aria-label="The Attic">
+            <h3>The Attic</h3>
+            <p>A stage that's never empty for long. This is where the night shifts.</p>
+            <a class="link-cta" href="#events">See the lineup &gt;</a>
+          </div>
+        </article>
+        <article class="space" data-space>
+          <button class="space__tab" aria-expanded="false" aria-controls="space-atrium">
+            <img src="assets/space-atrium.png" alt="" loading="lazy">
+            <span class="space__label">The Atrium</span>
+          </button>
+          <div class="space__body" id="space-atrium" role="region" aria-label="The Atrium">
+            <h3>The Atrium</h3>
+            <p>The most beautiful space in Hudson. Featuring a glass retractable roof, perfect for your next private event.</p>
+            <a class="link-cta" href="#reserve">Reserve your spot &gt;</a>
+          </div>
+        </article>
+        <article class="space" data-space>
+          <button class="space__tab" aria-expanded="false" aria-controls="space-social">
+            <img src="assets/space-social-hall.png" alt="" loading="lazy">
+            <span class="space__label">The Social Hall</span>
+          </button>
+          <div class="space__body" id="space-social" role="region" aria-label="The Social Hall">
+            <h3>The Social Hall</h3>
+            <p>Full buyout capacity for weddings, corporate events, and celebrations that need the whole stage.</p>
+            <a class="link-cta" href="#reserve">Plan your next event &gt;</a>
+          </div>
+        </article>
+        <article class="space space--dim" data-space>
+          <button class="space__tab" aria-expanded="false" aria-controls="space-grand">
+            <img src="assets/space-grand-hall.png" alt="" loading="lazy">
+            <span class="space__label">The Grand Hall</span>
+          </button>
+          <div class="space__body" id="space-grand" role="region" aria-label="The Grand Hall">
+            <h3>The Grand Hall</h3>
+            <p>When the whole house is yours. Max's at full scale — every room, every bar, every floor.</p>
+            <a class="link-cta" href="#reserve">Plan your next event &gt;</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EVENTS -->
+    <section class="events" id="events" aria-labelledby="events-title">
+      <div class="container">
+        <div class="events__head">
+          <h2 id="events-title" class="display display--lg reveal">Plans just got <span class="is-gold">better</span></h2>
+          <a class="btn btn--outline" href="#events">See all events</a>
+        </div>
+        <div class="events__stickers" aria-hidden="true">
+          <img class="sticker sticker--badge" src="assets/badge.png" alt="">
+          <img class="sticker sticker--star" src="assets/star.png" alt="">
+        </div>
+        <ul class="event-list">
+          <li class="event reveal">
+            <div class="event__img"><img src="assets/event-1.png" alt="Band performing" loading="lazy"></div>
+            <div class="event__info">
+              <p class="event__date">Saturday, Oct 9 · 7-10 PM</p>
+              <h3>Band Name One</h3>
+            </div>
+          </li>
+          <li class="event reveal">
+            <div class="event__img event__img--top"><img src="assets/event-2.png" alt="Band performing" loading="lazy"></div>
+            <div class="event__info">
+              <p class="event__date">Saturday, Oct 9 · 7-10 PM</p>
+              <h3>Band Name One</h3>
+            </div>
+          </li>
+          <li class="event reveal">
+            <div class="event__img"><img src="assets/event-3.png" alt="Band performing" loading="lazy"></div>
+            <div class="event__info">
+              <p class="event__date">Saturday, Oct 9 · 7-10 PM</p>
+              <h3>Band Name One</h3>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews" aria-label="Guest reviews">
+      <div class="reviews__track" data-carousel>
+        <figure class="review">
+          <div class="review__stars" aria-label="5 out of 5 stars"><img src="assets/star.png" alt=""><img src="assets/star.png" alt=""><img src="assets/star.png" alt=""><img src="assets/star.png" alt=""><img src="assets/star.png" alt=""></div>
+          <blockquote>Max's Social House is amazing. Great location, beautiful inside and out. Great food and service. Highly recommend.</blockquote>
+          <figcaption>-K Garcia</figcaption>
+        </figure>
+        <figure class="review">
+          <div class="review__stars" aria-label="5 out of 5 stars"><img src="assets/star.png" alt=""><img src="assets/star.png" alt=""><img src="assets/star.png" alt=""><img src="assets/star.png" alt=""><img src="assets/star.png" alt=""></div>
+          <blockquote>Max's Social House is amazing. Great location, beautiful inside and out. Great food and service. Highly recommend.</blockquote>
+          <figcaption>-K Garcia</figcaption>
+        </figure>
+        <figure class="review">
+          <div class="review__stars" aria-label="5 out of 5 stars"><img src="assets/star.png" alt=""><img src="assets/star.png" alt=""><img src="assets/star.png" alt=""><img src="assets/star.png" alt=""><img src="assets/star.png" alt=""></div>
+          <blockquote>Max's Social House is amazing. Great location, beautiful inside and out. Great food and service. Highly recommend.</blockquote>
+          <figcaption>-K Garcia</figcaption>
+        </figure>
+      </div>
+      <div class="reviews__dots" role="tablist" aria-label="Choose review"></div>
+    </section>
+
+    <!-- IG FEED -->
+    <section class="ig" aria-labelledby="ig-title">
+      <h2 id="ig-title" class="script ig__title reveal">follow along</h2>
+      <a class="ig__feed reveal" href="https://www.instagram.com/" target="_blank" rel="noopener">
+        <img src="assets/ig-feed.png" alt="Recent posts from Max's Social House on Instagram" loading="lazy">
+      </a>
+    </section>
+
+    <!-- RESERVATIONS CTA -->
+    <section class="reserve" id="reserve" aria-labelledby="reserve-title">
+      <img class="reserve__bg" src="assets/reserve-bg.png" alt="" aria-hidden="true" loading="lazy">
+      <div class="reserve__content">
+        <h2 id="reserve-title" class="reserve__title">
+          <span class="display reveal">What kind of</span>
+          <span class="display reveal">night are you</span>
+          <span class="script is-gold reveal">having?</span>
+        </h2>
+        <p class="hero__sub reveal">The table is set. The bar is open. The stage is ready.<br>The only question is what you want from the night.</p>
+        <div class="cta-row reveal">
+          <a class="btn btn--solid" href="#reserve">Reserve a table</a>
+          <a class="btn btn--ghost" href="#spaces">Explore our private spaces</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <img class="footer__logo" src="assets/logo-footer.svg" alt="Max's Social House" width="247" height="188" loading="lazy">
+    <div class="footer__cols">
+      <div>
+        <h4>Visit</h4>
+        <a href="#reserve">Hours &amp; Location</a>
+        <a href="#reserve">Parking &amp; Access</a>
+        <a href="#reserve">Reserve a Table</a>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="#menu">Menus</a>
+        <a href="#spaces">The Five Spaces</a>
+        <a href="#events">Events Calendar</a>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a>
+        <a href="#reserve">Contact Us</a>
+      </div>
+    </div>
+    <p class="footer__legal">© <span data-year>2026</span> Max's Social House. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
