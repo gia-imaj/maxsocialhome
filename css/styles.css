@@ -228,12 +228,15 @@ ul { list-style: none; }
   background: linear-gradient(180deg, transparent 45%, rgba(15, 26, 61, .55) 100%);
 }
 .night__panel:hover img { transform: scale(1.05); filter: brightness(1.1); }
-.night__text { position: absolute; z-index: 1; left: 28px; right: 28px; bottom: 50px; max-width: 360px; }
+.night__text { position: absolute; z-index: 1; left: 28px; right: 28px; bottom: 64px; max-width: 360px; }
 .night__text h3 { font-weight: 800; font-size: var(--t-h3); color: var(--cream); line-height: 1.05; text-transform: uppercase; }
 .night__text p { margin: 22px 0 28px; min-height: 3.6em; font-weight: 500; font-size: 18px; color: var(--sand); line-height: 1.2; }
 
 /* ---------- Spaces accordion ---------- */
 .spaces {
+  /* margin-top is the "hold": scroll distance where the pinned night section
+     stays fully visible, CTAs included, before Spaces slides over it. */
+  margin-top: 45vh;
   position: relative; z-index: 1;
   box-shadow: 0 -24px 48px rgba(0, 0, 0, .45);
   display: grid; grid-template-columns: 38% 62%;
