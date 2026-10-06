@@ -247,13 +247,15 @@ ul { list-style: none; }
 }
 .happy__inner {
   max-width: 1172px; margin: 0 auto;
-  display: flex; align-items: center; gap: 28px;
+  display: flex; align-items: center; justify-content: center; gap: 24px 40px;
 }
 .happy__star { width: 64px; height: 64px; flex: none; animation: spin 18s linear infinite; filter: brightness(0) invert(.96) sepia(.1); }
-.happy__text { flex: 1; }
+.happy__text { flex: none; }
 .happy__title { font-size: clamp(2.25rem, 4.4vw, 3.5rem); color: var(--cream); }
 .happy__title span { color: var(--navy); }
 .happy__sub { margin-top: 6px; font-size: var(--t-lede); color: var(--cream); }
+.happy__hours span { white-space: nowrap; }
+.happy__hours { margin-top: 8px; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--navy); }
 .happy .btn { flex: none; }
 
 /* ---------- Night changes ---------- */
@@ -359,6 +361,7 @@ ul { list-style: none; }
 .events .container { position: relative; padding: 0 40px; }
 .events__head { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; padding-left: 10px; }
 .events__head h2 { color: #fff; }
+.events__ctas { display: flex; flex-wrap: wrap; gap: 12px; flex: none; }
 .events__stickers { position: absolute; left: 0; top: 58px; z-index: 2; pointer-events: none; }
 .sticker--badge { width: 194px; height: 243px; object-fit: cover; }
 .sticker--star { position: absolute; left: 63px; top: 83px; width: 67px; height: 67px; animation: spin 18s linear infinite; }
@@ -514,7 +517,8 @@ ul { list-style: none; }
   .space__body { left: var(--gutter); right: var(--gutter); bottom: 40px; }
   .space__body h3 { white-space: normal; }
 
-  .happy__inner { flex-wrap: wrap; gap: 16px 20px; }
+  .happy__inner { flex-wrap: wrap; gap: 16px 20px; justify-content: flex-start; }
+  .happy__text { flex: 1 1 200px; }
   .happy__star { width: 48px; height: 48px; }
   .happy .btn { width: 100%; }
   .night__text { top: auto; bottom: 40px; }
